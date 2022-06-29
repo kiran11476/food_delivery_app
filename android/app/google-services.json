@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "406047573867",
+    "project_id": "flutter-login-cc108",
+    "storage_bucket": "flutter-login-cc108.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:406047573867:android:d265b2168e0a9b7d5bae2e",
+        "android_client_info": {
+          "package_name": "com.example.zartech"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "406047573867-um4su1bfl97eulls1e481b1qonjprn9o.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCufmzxG-3ImSKtoIbC-OP529Gik4FRScc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "406047573867-um4su1bfl97eulls1e481b1qonjprn9o.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
