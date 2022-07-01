@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/android.iml" filepath="$PROJECT_DIR$/.idea/modules/android.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/android.app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/android.app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/android.app.androidTest.iml" filepath="$PROJECT_DIR$/.idea/modules/app/android.app.androidTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/android.app.main.iml" filepath="$PROJECT_DIR$/.idea/modules/app/android.app.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/android.app.unitTest.iml" filepath="$PROJECT_DIR$/.idea/modules/app/android.app.unitTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/389075149/android.firebase_auth.iml" filepath="$PROJECT_DIR$/.idea/modules/389075149/android.firebase_auth.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/389075149/android.firebase_auth.androidTest.iml" filepath="$PROJECT_DIR$/.idea/modules/389075149/android.firebase_auth.androidTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/389075149/android.firebase_auth.main.iml" filepath="$PROJECT_DIR$/.idea/modules/389075149/android.firebase_auth.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/389075149/android.firebase_auth.unitTest.iml" filepath="$PROJECT_DIR$/.idea/modules/389075149/android.firebase_auth.unitTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/-38057208/android.firebase_core.iml" filepath="$PROJECT_DIR$/.idea/modules/-38057208/android.firebase_core.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/-38057208/android.firebase_core.androidTest.iml" filepath="$PROJECT_DIR$/.idea/modules/-38057208/android.firebase_core.androidTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/-38057208/android.firebase_core.main.iml" filepath="$PROJECT_DIR$/.idea/modules/-38057208/android.firebase_core.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/-38057208/android.firebase_core.unitTest.iml" filepath="$PROJECT_DIR$/.idea/modules/-38057208/android.firebase_core.unitTest.iml" />
+    </modules>
+  </component>
+</project>

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_cart/flutter_cart.dart';
+
 import 'package:zartech/services/remoteclients.dart';
 
 class SoupSalad extends StatelessWidget {
@@ -7,8 +7,8 @@ class SoupSalad extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    var cart = FlutterCart();
-
+    String url =
+        'http://foodsafetyhelpline.com/wp-content/uploads/2013/05/non-veg-300x259.jpg';
     // var c = Remoteservices().getPost();
     // final controller = Get.put(ProductController());
     return SafeArea(
@@ -25,17 +25,18 @@ class SoupSalad extends StatelessWidget {
                     itemCount: snapshot.data!.length,
                     itemBuilder: (context, index) {
                       return SizedBox(
-                        height: 250,
+                        height: 200,
                         // width: double.infinity,
                         child: Row(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
                             Padding(
                               padding: const EdgeInsets.all(8.0),
-                              child: Container(
-                                height: 20,
-                                width: 20,
-                                color: Colors.red,
+                              child: SizedBox(
+                                child: Image(
+                                    height: 17,
+                                    width: 17,
+                                    image: NetworkImage(url)),
                               ),
                             ),
                             SizedBox(
@@ -50,25 +51,24 @@ class SoupSalad extends StatelessWidget {
                                     snapshot.data![index]["dish_name"]
                                         .toString(),
                                     style: const TextStyle(
-                                        fontWeight: FontWeight.bold,
-                                        fontSize: 17,
-                                        wordSpacing: 2,
-                                        letterSpacing: 1),
+                                      fontWeight: FontWeight.bold,
+                                      fontSize: 17,
+                                    ),
                                   ),
                                   Row(
                                     mainAxisAlignment:
                                         MainAxisAlignment.spaceBetween,
                                     children: [
                                       Text(
-                                        '${snapshot.data![index]["dish_price"]}Rs',
+                                        '${snapshot.data![index]["dish_price"]}\tRs',
                                         style: const TextStyle(
                                             fontWeight: FontWeight.bold,
                                             fontSize: 12),
                                       ),
                                       Text(
-                                        '${snapshot.data![index]["dish_calories"]}Calories',
+                                        '${snapshot.data![index]["dish_calories"]}\tCalories',
                                         style: const TextStyle(
-                                            fontWeight: FontWeight.bold,
+                                            fontWeight: FontWeight.w500,
                                             fontSize: 12),
                                       ),
                                     ],
@@ -77,8 +77,12 @@ class SoupSalad extends StatelessWidget {
                                     snapshot.data![index]["dish_description"]
                                         .toString(),
                                     style: const TextStyle(
-                                        fontWeight: FontWeight.w400,
-                                        letterSpacing: 1),
+                                      color: Colors.grey,
+                                      fontWeight: FontWeight.w800,
+                                    ),
+                                  ),
+                                  const SizedBox(
+                                    height: 20,
                                   ),
                                   Container(
                                     decoration: BoxDecoration(
@@ -105,90 +109,19 @@ class SoupSalad extends StatelessWidget {
                             ),
                             Padding(
                               padding: const EdgeInsets.all(10),
-                              child: Container(
+                              child: SizedBox(
                                 child: Image.network(
-                                    snapshot.data![index]['dish_image']),
-                                color: Colors.red,
-                                width: 70,
-                                height: 70,
+                                    'https://img.freepik.com/free-photo/big-hamburger-with-double-beef-french-fries_252907-8.jpg?w=2000'),
+                                width: 80,
+                                height: 80,
                               ),
                             )
                           ],
                         ),
                       );
-                      // title:
-                      //     Text(snapshot.data![index]["dish_name"].toString()),
-                      // leading: Image.network(
-                      //   snapshot.data![index]['dish_image'].toString(),
-                      //   width: 50,
-                      // ),
-                      // subtitle: Text(snapshot.data![index]['dish_description']
-                      //     .toString()),
                     });
               }
-              return CircularProgressIndicator();
+              return Container();
             }));
   }
 }
-
-// ListView.builder(
-//   scrollDirection: Axis.vertical,
-//   shrinkWrap: true,
-//   itemCount: productController.productList.length,
-//   itemBuilder: (context, index) {
-//     return SizedBox(
-//       height: 250,
-//       width: double.infinity,
-//       child: Row(
-//         crossAxisAlignment: CrossAxisAlignment.start,
-//         children: [
-//           Padding(
-//             padding: const EdgeInsets.all(8.0),
-//             child: Container(
-//               height: 20,
-//               width: 20,
-//               color: const Color.fromARGB(255, 171, 80, 80),
-//             ),
-//           ),
-//           Column(
-//             crossAxisAlignment: CrossAxisAlignment.start,
-//             children: [
-//               // const Text(),
-//               const SizedBox(
-//                 height: 10,
-//               ),
-//               Row(
-//                 mainAxisAlignment: MainAxisAlignment.spaceAround,
-//                 children: [
-//                   Text("data"),
-//                   SizedBox(
-//                     width: 180,
-//                   ),
-//                   Text("dc"),
-//                 ],
-//               ),
-//               kheight,
-//               const Text(
-//                   'chicken dfnajskndjjfjfbsdj\nbfskjbfsbfbfbsfnsbmfnbfbsbfsbjfbsbjh'),
-//               kheight,
-//               Container(
-//                 height: 60,
-//                 width: 60,
-//                 color: Colors.green,
-//               ),
-//               // const Text('data')
-//             ],
-//           ),
-//           Padding(
-//             padding: const EdgeInsets.all(8.0),
-//             child: Container(
-//               height: 70,
-//               width: 70,
-//               color: Colors.green,
-//             ),
-//           ),
-//         ],
-//       ),
-//     );
-//   },
-// );

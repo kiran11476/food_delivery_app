@@ -40,17 +40,34 @@ import 'package:dio/dio.dart';
 
 class NewApiService {
   String url = "https://www.mocky.io/v2/5dfccffc310000efc8d2c1ad";
-  Dio _dio = Dio();
+  final Dio _dio = Dio();
   // newApiServices() {
   //   _dio = Dio();
   // }
-  final List<dynamic> responseDataList = [];
+
   List<dynamic> saladsAndSoupsList = [];
   List<dynamic> saladsAndSoupsListItems = [];
 
   Future<List<dynamic>?> getSaladsAndSoups() async {
     try {
       final response = await _dio.get(url);
+      if (response.statusCode == 200) {
+        // responseDataList.add();÷
+        saladsAndSoupsList = await response.data[0]["table_menu_list"][0]
+            ["category_dishes"] as List;
+        return saladsAndSoupsList;
+      } else {
+        throw DioError;
+      }
+    } on DioError {
+      print('Error Occured');
+    }
+    return null;
+  }
+
+  Future<List<dynamic>?> postData() async {
+    try {
+      final response = await _dio.post(url);
       if (response.statusCode == 200) {
         // responseDataList.add();÷
         saladsAndSoupsList = await response.data[0]["table_menu_list"][0]

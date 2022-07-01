@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-
 import 'package:get/get.dart';
 import 'package:zartech/screens/sub_pages.dart/cart_contoller.dart';
+
 import 'sub_pages.dart/screen1.dart';
 
 class ProfileScreen extends StatelessWidget {
@@ -19,7 +19,7 @@ class ProfileScreen extends StatelessWidget {
               padding: const EdgeInsets.all(8.0),
               child: IconButton(
                 onPressed: () {
-                  Get.to(AddingToCart());
+                  Get.to(CartContoller());
                 },
                 icon: const Icon(
                   Icons.shopping_cart,
@@ -54,13 +54,13 @@ class ProfileScreen extends StatelessWidget {
             ],
           ),
         ),
-        body: TabBarView(
+        body: const TabBarView(
           children: [
             SoupSalad(),
-            const Center(
+            Center(
               child: Text('data'),
             ),
-            const Center(
+            Center(
               child: Text('data'),
             ),
           ],
