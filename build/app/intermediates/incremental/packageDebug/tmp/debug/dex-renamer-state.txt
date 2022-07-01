@@ -1,4 +1,19 @@
-#Fri Jul 01 14:39:37 IST 2022
-base.0=/Users/kiranraj/zartech/build/app/intermediates/dex/debug/mergeDexDebug/classes.dex
-renamed.0=classes.dex
+#Fri Jul 01 20:20:04 IST 2022
+path.4=9/classes.dex
+path.3=1/classes.dex
+path.2=0/classes.dex
+path.1=0/classes.dex
+path.5=classes2.dex
 path.0=classes.dex
+base.4=/Users/kiranraj/zartech/build/app/intermediates/dex/debug/mergeProjectDexDebug/9/classes.dex
+base.3=/Users/kiranraj/zartech/build/app/intermediates/dex/debug/mergeProjectDexDebug/1/classes.dex
+base.2=/Users/kiranraj/zartech/build/app/intermediates/dex/debug/mergeProjectDexDebug/0/classes.dex
+base.1=/Users/kiranraj/zartech/build/app/intermediates/dex/debug/mergeLibDexDebug/0/classes.dex
+base.0=/Users/kiranraj/zartech/build/app/intermediates/dex/debug/mergeExtDexDebug/classes.dex
+renamed.3=classes4.dex
+renamed.2=classes3.dex
+renamed.1=classes2.dex
+renamed.0=classes.dex
+renamed.5=classes6.dex
+renamed.4=classes5.dex
+base.5=/Users/kiranraj/zartech/build/app/intermediates/dex/debug/mergeExtDexDebug/classes2.dex

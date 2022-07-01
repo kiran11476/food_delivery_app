@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:get/get.dart';
-import 'package:zartech/screens/sub_pages.dart/screen1.dart';
+import 'package:cloud_firestore/cloud_firestore.dart';
 
 class CartContoller extends StatelessWidget {
   const CartContoller({Key? key}) : super(key: key);

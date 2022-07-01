@@ -1,3 +1,4 @@
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 
 import 'package:zartech/services/remoteclients.dart';
@@ -97,9 +98,23 @@ class SoupSalad extends StatelessWidget {
                                         IconButton(
                                             onPressed: () {},
                                             icon: const Icon(Icons.remove)),
-                                        const Text("data"),
+                                        Text(
+                                          '0',
+                                          style: TextStyle(color: Colors.white),
+                                        ),
                                         IconButton(
-                                            onPressed: () {},
+                                            onPressed: () {
+                                              FirebaseFirestore.instance
+                                                  .collection('cart')
+                                                  .add({
+                                                'item_name':
+                                                    '${snapshot.data![index]["dish_name"]}',
+                                                'item_price':
+                                                    '${snapshot.data![index]["dish_price"]}',
+                                                'item_calories':
+                                                    '${snapshot.data![index]["dish_calories"]}',
+                                              });
+                                            },
                                             icon: const Icon(Icons.add)),
                                       ],
                                     ),
