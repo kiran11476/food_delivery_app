@@ -1,5 +1,9 @@
+import 'dart:developer';
+
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:zartech/controller/product_controller.dart';
 
 import 'package:zartech/services/remoteclients.dart';
 
@@ -8,6 +12,7 @@ class SoupSalad extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final Controller controller = Get.put(Controller());
     String url =
         'http://foodsafetyhelpline.com/wp-content/uploads/2013/05/non-veg-300x259.jpg';
     // var c = Remoteservices().getPost();
@@ -95,15 +100,19 @@ class SoupSalad extends StatelessWidget {
                                     width: 130,
                                     child: Row(
                                       children: [
-                                        IconButton(
-                                            onPressed: () {},
-                                            icon: const Icon(Icons.remove)),
-                                        Text(
-                                          '0',
-                                          style: TextStyle(color: Colors.white),
-                                        ),
-                                        IconButton(
+                                        Obx(() => IconButton(
                                             onPressed: () {
+                                              controller.decrement();
+                                            },
+                                            icon: const Icon(Icons.remove))),
+                                        Obx(() => Text(
+                                              controller.count.toString(),
+                                              style: const TextStyle(
+                                                  color: Colors.white),
+                                            )),
+                                        Obx(() => IconButton(
+                                            onPressed: () {
+                                              controller.increment();
                                               FirebaseFirestore.instance
                                                   .collection('cart')
                                                   .add({
@@ -115,7 +124,7 @@ class SoupSalad extends StatelessWidget {
                                                     '${snapshot.data![index]["dish_calories"]}',
                                               });
                                             },
-                                            icon: const Icon(Icons.add)),
+                                            icon: const Icon(Icons.add))),
                                       ],
                                     ),
                                   )
