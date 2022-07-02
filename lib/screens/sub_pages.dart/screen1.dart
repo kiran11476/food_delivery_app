@@ -1,5 +1,3 @@
-import 'dart:developer';
-
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -12,11 +10,10 @@ class SoupSalad extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final Controller controller = Get.put(Controller());
+    final Controller addController = Get.put(Controller());
     String url =
         'http://foodsafetyhelpline.com/wp-content/uploads/2013/05/non-veg-300x259.jpg';
-    // var c = Remoteservices().getPost();
-    // final controller = Get.put(ProductController());
+
     return SafeArea(
         child: FutureBuilder<List<dynamic>?>(
             future: NewApiService().getSaladsAndSoups(),
@@ -32,7 +29,6 @@ class SoupSalad extends StatelessWidget {
                     itemBuilder: (context, index) {
                       return SizedBox(
                         height: 200,
-                        // width: double.infinity,
                         child: Row(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
@@ -100,19 +96,19 @@ class SoupSalad extends StatelessWidget {
                                     width: 130,
                                     child: Row(
                                       children: [
-                                        Obx(() => IconButton(
+                                        IconButton(
                                             onPressed: () {
-                                              controller.decrement();
+                                              addController.decrement();
                                             },
-                                            icon: const Icon(Icons.remove))),
+                                            icon: const Icon(Icons.remove)),
                                         Obx(() => Text(
-                                              controller.count.toString(),
+                                              addController.count.toString(),
                                               style: const TextStyle(
                                                   color: Colors.white),
                                             )),
-                                        Obx(() => IconButton(
+                                        IconButton(
                                             onPressed: () {
-                                              controller.increment();
+                                              addController.increment();
                                               FirebaseFirestore.instance
                                                   .collection('cart')
                                                   .add({
@@ -124,7 +120,7 @@ class SoupSalad extends StatelessWidget {
                                                     '${snapshot.data![index]["dish_calories"]}',
                                               });
                                             },
-                                            icon: const Icon(Icons.add))),
+                                            icon: const Icon(Icons.add)),
                                       ],
                                     ),
                                   )
