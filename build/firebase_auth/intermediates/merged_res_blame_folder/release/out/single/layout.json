@@ -1,0 +1,34 @@
+[
+    {
+        "merged": "/Users/kiranraj/zartech/build/firebase_auth/intermediates/merged_res/release/layout/browser_actions_context_menu_page.xml",
+        "source": "/Users/kiranraj/.gradle/caches/transforms-3/d3115d6a100f12304c9f2cdb1120ce7b/transformed/browser-1.4.0/res/layout/browser_actions_context_menu_page.xml"
+    },
+    {
+        "merged": "/Users/kiranraj/zartech/build/firebase_auth/intermediates/merged_res/release/layout/browser_actions_context_menu_row.xml",
+        "source": "/Users/kiranraj/.gradle/caches/transforms-3/d3115d6a100f12304c9f2cdb1120ce7b/transformed/browser-1.4.0/res/layout/browser_actions_context_menu_row.xml"
+    },
+    {
+        "merged": "/Users/kiranraj/zartech/build/firebase_auth/intermediates/merged_res/release/layout/notification_template_part_time.xml",
+        "source": "/Users/kiranraj/.gradle/caches/transforms-3/67aedebeafb39cc53db31c0bc10af3df/transformed/core-1.6.0/res/layout/notification_template_part_time.xml"
+    },
+    {
+        "merged": "/Users/kiranraj/zartech/build/firebase_auth/intermediates/merged_res/release/layout/notification_action_tombstone.xml",
+        "source": "/Users/kiranraj/.gradle/caches/transforms-3/67aedebeafb39cc53db31c0bc10af3df/transformed/core-1.6.0/res/layout/notification_action_tombstone.xml"
+    },
+    {
+        "merged": "/Users/kiranraj/zartech/build/firebase_auth/intermediates/merged_res/release/layout/notification_template_icon_group.xml",
+        "source": "/Users/kiranraj/.gradle/caches/transforms-3/67aedebeafb39cc53db31c0bc10af3df/transformed/core-1.6.0/res/layout/notification_template_icon_group.xml"
+    },
+    {
+        "merged": "/Users/kiranraj/zartech/build/firebase_auth/intermediates/merged_res/release/layout/notification_action.xml",
+        "source": "/Users/kiranraj/.gradle/caches/transforms-3/67aedebeafb39cc53db31c0bc10af3df/transformed/core-1.6.0/res/layout/notification_action.xml"
+    },
+    {
+        "merged": "/Users/kiranraj/zartech/build/firebase_auth/intermediates/merged_res/release/layout/custom_dialog.xml",
+        "source": "/Users/kiranraj/.gradle/caches/transforms-3/67aedebeafb39cc53db31c0bc10af3df/transformed/core-1.6.0/res/layout/custom_dialog.xml"
+    },
+    {
+        "merged": "/Users/kiranraj/zartech/build/firebase_auth/intermediates/merged_res/release/layout/notification_template_part_chronometer.xml",
+        "source": "/Users/kiranraj/.gradle/caches/transforms-3/67aedebeafb39cc53db31c0bc10af3df/transformed/core-1.6.0/res/layout/notification_template_part_chronometer.xml"
+    }
+]
