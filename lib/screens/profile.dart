@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:zartech/screens/drawer.dart';
+import 'package:zartech/screens/loginpage.dart';
 import 'package:zartech/screens/sub_pages.dart/cart_contoller.dart';
+import 'package:zartech/screens/sub_pages.dart/screen2.dart';
 
 import 'sub_pages.dart/screen1.dart';
 
@@ -12,8 +15,10 @@ class ProfileScreen extends StatelessWidget {
     return DefaultTabController(
       length: 3,
       child: Scaffold(
+        drawer: const Drawerss(),
         backgroundColor: Colors.white,
         appBar: AppBar(
+          iconTheme: const IconThemeData(color: Colors.black),
           actions: [
             Padding(
               padding: const EdgeInsets.all(8.0),
@@ -29,11 +34,7 @@ class ProfileScreen extends StatelessWidget {
               ),
             )
           ],
-          backgroundColor: Colors.white,
-          leading: const Icon(
-            Icons.align_horizontal_left,
-            color: Colors.black,
-          ),
+          backgroundColor: const Color.fromARGB(255, 255, 255, 255),
           bottom: const TabBar(
             unselectedLabelColor: Colors.black,
             indicatorWeight: 3,
@@ -57,15 +58,44 @@ class ProfileScreen extends StatelessWidget {
         body: const TabBarView(
           children: [
             SoupSalad(),
-            Center(
-              child: Text('data'),
-            ),
+            FromThe(),
             Center(
               child: Text('data'),
             ),
           ],
         ),
       ),
+    );
+  }
+}
+
+class LogIn extends StatelessWidget {
+  const LogIn({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: SafeArea(
+          child: Center(
+        child: Container(
+          decoration: const BoxDecoration(shape: BoxShape.circle),
+          width: 300,
+          height: 60,
+          child: ElevatedButton(
+            onPressed: () {
+              Get.to(const LoginScreen());
+            },
+            style: ButtonStyle(
+              shape: MaterialStateProperty.all<RoundedRectangleBorder>(
+                RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(30.0),
+                ),
+              ),
+            ),
+            child: const Text('Google'),
+          ),
+        ),
+      )),
     );
   }
 }

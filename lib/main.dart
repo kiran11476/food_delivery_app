@@ -2,6 +2,7 @@ import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:get/route_manager.dart';
 import 'package:zartech/screens/loginpage.dart';
+import 'package:zartech/screens/profile.dart';
 
 void main(List<String> args) {
   runApp(const MyApp());
@@ -33,7 +34,8 @@ class _HomePageState extends State<HomePage> {
     return firebaseApp;
   }
 
-  //fluttertest@doctorcode.com
+  //fluttertest@doctorcode.com'username'
+  //password'123456789',
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -41,7 +43,7 @@ class _HomePageState extends State<HomePage> {
         future: _initilizeFirebase(),
         builder: (context, snapshot) {
           if (snapshot.connectionState == ConnectionState.done) {
-            return const LoginScreen();
+            return const LogIn();
           }
           return const Center(
             child: CircularProgressIndicator(),

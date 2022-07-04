@@ -3,6 +3,8 @@ import 'package:flutter/material.dart';
 import 'package:zartech/core/constants.dart';
 import 'package:zartech/screens/profile.dart';
 
+FirebaseAuth auth = FirebaseAuth.instance;
+
 class LoginScreen extends StatefulWidget {
   const LoginScreen({Key? key}) : super(key: key);
 
@@ -15,7 +17,6 @@ class _LoginScreenState extends State<LoginScreen> {
       {required String email,
       required String passsword,
       required BuildContext context}) async {
-    FirebaseAuth auth = FirebaseAuth.instance;
     User? user;
     try {
       UserCredential userCredential = await auth.signInWithEmailAndPassword(
@@ -24,7 +25,7 @@ class _LoginScreenState extends State<LoginScreen> {
       user = userCredential.user;
     } on FirebaseAuthException catch (e) {
       if (e.code == "user not found") {
-        Text("No User found that Email");
+        const Text("No User found that Email");
       }
     }
     return user;
@@ -60,7 +61,7 @@ class _LoginScreenState extends State<LoginScreen> {
               controller: _emailcontroller,
               keyboardType: TextInputType.emailAddress,
               decoration: const InputDecoration(
-                hintText: "User Email",
+                hintText: "User Email\t given in the main page",
                 prefixIcon: Icon(
                   Icons.email,
                   color: Colors.black,

@@ -22,4 +22,20 @@ class NewApiService {
     }
     return null;
   }
+
+  Future<List<dynamic>?> fromTheBer() async {
+    try {
+      final response = await _dio.get(url);
+      if (response.statusCode == 200) {
+        saladsAndSoupsList = await response.data[0]["table_menu_list"][1]
+            ["category_dishes"] as List;
+        return saladsAndSoupsList;
+      } else {
+        throw DioError;
+      }
+    } on DioError {
+      const Text('Error Occured');
+    }
+    return null;
+  }
 }
