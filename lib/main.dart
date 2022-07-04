@@ -1,7 +1,7 @@
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:get/route_manager.dart';
-import 'package:zartech/screens/loginpage.dart';
+
 import 'package:zartech/screens/profile.dart';
 
 void main(List<String> args) {

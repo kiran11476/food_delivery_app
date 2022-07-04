@@ -130,10 +130,10 @@ class SoupSalad extends StatelessWidget {
                             Padding(
                               padding: const EdgeInsets.all(10),
                               child: SizedBox(
-                                child: Image.network(
-                                    'https://img.freepik.com/free-photo/big-hamburger-with-double-beef-french-fries_252907-8.jpg?w=2000'),
                                 width: 80,
                                 height: 80,
+                                child: Image.network(
+                                    'https://img.freepik.com/free-photo/big-hamburger-with-double-beef-french-fries_252907-8.jpg?w=2000'),
                               ),
                             )
                           ],
