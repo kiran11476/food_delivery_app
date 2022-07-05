@@ -1,4 +1,4 @@
-#Mon Jul 04 13:24:47 IST 2022
+#Mon Jul 04 16:46:44 IST 2022
 base.0=/Users/kiranraj/zartech/build/app/intermediates/dex/release/minifyReleaseWithR8/classes.dex
 renamed.0=classes.dex
 path.0=classes.dex
